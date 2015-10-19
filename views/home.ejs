@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/plugin/fileupload/vendor/jquery.ui.widget.js"></script>
+    <script src="js/plugin/fileupload/jquery.iframe-transport.js"></script>
+    <script src="js/plugin/fileupload/jquery.fileupload.js"></script>
+  </head>
+  <body>
+        <% if (!user) { %>
+            <p>Welcome! Please <a href="/login">log in</a>.</p>
+        <% } else { %>
+            <p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
+        <% } %>
+        <input id="fileupload" type="file" name="files[]" data-url="/upload" multiple>
+        <script>$('#fileupload').fileupload({ dataType: 'json' })</script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "market",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "jquery-file-upload-middleware": "^0.1.7",
+    "mongoose": "^4.1.11",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^3.1.0",
+    "serve-favicon": "^2.3.0"
+  }
+}
