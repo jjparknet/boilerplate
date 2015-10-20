@@ -12,14 +12,12 @@ var LocalStrategy = require('passport-local').Strategy;
 
 var route = require('./routes/index');
 var auth = require('./routes/auth');
-var user = require('./routes/user');
+var api = require('./routes/api');
 
 upload.configure({
     uploadDir: __dirname + '/public/uploads/',
     uploadUrl: '/uploads'
 });
-
-
 
 var app = express();
 
@@ -46,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', route);
 app.use('/', auth);
-app.use('/api', user);
+app.use('/api', api);
 app.use('/upload', function(req, res, next){
     upload.fileHandler({
         uploadDir: function () {
