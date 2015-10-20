@@ -1,1 +1,1 @@
-# fullstack-boilerplate
+# boilerplate
